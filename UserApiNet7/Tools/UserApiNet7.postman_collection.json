@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "8df6cd69-c2ae-43af-9fb0-597362df0868",
+		"name": "UserApiNet7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14258826"
+	},
+	"item": [
+		{
+			"name": "GetUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7044/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById - Valid Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7044/api/User/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserById - Invalid Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7044/api/User/test",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser - Valid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateOfBirth\": \"1984-06-12\",\r\n    \"firstName\": \"Joe\",\r\n    \"lastName\": \"Blogs\",\r\n    \"address\": {\r\n      \"streetNumber\": 197,\r\n      \"streetName\": \"Dargle\",\r\n      \"suburb\": \"Island Bay\",\r\n      \"city\": \"Wellington\",\r\n      \"country\": \"New Zealand\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser - Missing Street Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateOfBirth\": \"1984-06-12\",\r\n    \"firstName\": \"Joe\",\r\n    \"lastName\": \"Blogs\",\r\n    \"address\": {\r\n      \"streetNumber\": 197,\r\n      \"suburb\": \"Island Bay\",\r\n      \"city\": \"Wellington\",\r\n      \"country\": \"New Zealand\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser - Missing First Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateOfBirth\": \"1984-06-12\",\r\n    \"lastName\": \"Blogs\",\r\n    \"address\": {\r\n      \"streetNumber\": 197,\r\n      \"streetName\": \"Dargle\",\r\n      \"suburb\": \"Island Bay\",\r\n      \"city\": \"Wellington\",\r\n      \"country\": \"New Zealand\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser - Invalid First Name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateOfBirth\": \"1984-06-12\",\r\n    \"firstName\": \"Joe123\",\r\n    \"lastName\": \"Blogs\",\r\n    \"address\": {\r\n      \"streetNumber\": 197,\r\n      \"streetName\": \"Dargle\",\r\n      \"suburb\": \"Island Bay\",\r\n      \"city\": \"Wellington\",\r\n      \"country\": \"New Zealand\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser - Missing Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"dateOfBirth\": \"1984-06-12\",\r\n    \"firstName\": \"Joe\",\r\n    \"lastName\": \"Blogs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/api/User",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"api",
+						"User"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
